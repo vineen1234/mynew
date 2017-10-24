@@ -1,0 +1,34 @@
+I am working on patch deployment automation means that am automating the manual deployments
+
+we have product called JSDN ( jamcracker service network delivery) for this we have 8 cumstomers 
+
+We are using Jboss as web application server 
+
+for this first we are giving patch file to the customer through email as of now we are not mention in the script
+
+from the link customer has to download the tar file under jbos home
+
+after that my script validate the tar file is available or not if the tar file is avilable the script will give the popup message to the customer that tar file file is avilable.
+
+after that we  nedd to extract the tar file under the jboss home and after extract the tar file we will get one more tar file and build.properties file
+
+and then we need to validate existing build.properties file and updated build.properties file
+
+if both existing and updated one are same my script will give the popup message to the customer that both files are same please contact to the jamcracker team.
+
+if both files are different script will give the popup message to the customer that both files are different now we are going to proceed for the deployment.
+
+and than we will stop all the JSDn services 
+
+and then we need to take the backup of jsdn.ear file to some location and before moving the file and after moved we need to disply the file size for customer because 
+we can see the proper backup.
+
+and also we need to take the existing build.properties file.
+
+Than we need to override the build.properties file(old to new)
+
+and than we need to apply the patch that is written in ant 
+
+and we are calling one script that Restapicall.sh that is for DB entries which customer is did the deployment or patche changes for our reference.
+
+and than we will start all the JSDN services.
